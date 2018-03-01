@@ -20,9 +20,18 @@ namespace LoopyLandscape {
 			graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
 			// шар
-			graphics.FillEllipse(Brushes.Violet, 30, 50, 46, 66); // первая пара чисел - координаты, вторая - ширина и высота
+            for (int number = 0; number <= 5; number = number + 1)
+            {
+                int n;
+                n = number * 60 + 30;
+                int n2;
+                n2 = number * 60 + 53;
+                graphics.FillEllipse(Brushes.Violet, n, 50, 46, 66);
+                graphics.DrawLine(Pens.BlueViolet, n2, 116, 210, 300);
+            }
+			// первая пара чисел - координаты, вторая - ширина и высота
 			// нитка
-			graphics.DrawLine(Pens.BlueViolet, 53, 116, 210, 300); // первая пара чисел - координаты начала отрезка, вторая - координаты конца
+			// первая пара чисел - координаты начала отрезка, вторая - координаты конца
 
 			// бобр
 			DrawHopper(208, 240);
@@ -32,5 +41,10 @@ namespace LoopyLandscape {
 			Image img = Image.FromFile("../../Hopper-Jumping.png");
 			graphics.DrawImage(img, x, y);
 		}
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
 	}
 }
