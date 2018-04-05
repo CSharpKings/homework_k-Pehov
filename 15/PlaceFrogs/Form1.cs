@@ -16,11 +16,10 @@ namespace PlaceFrogs {
             graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
             // рисуем кувшинки и лягушек
-            for (int i = 0; i < 1000; i += 250) {
+            for (int i = 0; i < 1000; i += 250)
+            {
                 DrawLilypad(i, 0);
-            }
-            for (int i = 50; i < 1000; i += 250) {
-                DrawFrog(i, 35);
+                DrawFrog(i + 50, 35);
             }
         }
 
